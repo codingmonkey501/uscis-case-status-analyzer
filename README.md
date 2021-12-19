@@ -1,1 +1,5 @@
-# uscis-case-status-analyzer
+## Run crawler
+
+Change Web crawler to java (Java + JerseyClient + sqlite)
+
+For personal analysis
