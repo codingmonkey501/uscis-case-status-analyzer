@@ -1,0 +1,23 @@
+<div class="row">
+    <h4>Case Status by Receipt Number Group</h4>
+    <select class="col-2" matNativeControl (change)="selectCenter($event)">
+        <option *ngFor="let option of processingCenterNames" [value]="option.value"
+                [selected]="selectedProcessingCenter === option.value">{{ option.viewValue }}</option>
+    </select>
+    <select class="col-2" matNativeControl (change)="selectFormName($event)">
+        <option *ngFor="let option of formNames" [value]="option.value"
+                [selected]="selectedFormName === option.value">{{ option.viewValue }}</option>
+    </select>
+</div>
+<div class="row">
+    <div class="chart-wrapper">
+        <canvas baseChart
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [plugins]="barChartPlugins"
+                [legend]="barChartLegend"
+                [chartType]="barChartType">
+        </canvas>
+    </div>
+</div>

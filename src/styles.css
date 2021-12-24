@@ -1,0 +1,6 @@
+/* Global Styles */
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+
+.top-buffer {
+    margin-top:60px;
+}

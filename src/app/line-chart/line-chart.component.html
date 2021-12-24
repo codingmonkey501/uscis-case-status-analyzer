@@ -1,0 +1,24 @@
+<div class="row">
+    <h4>Number of Cases Received or Updated on the Month</h4>
+    <select class="col-2" matNativeControl (change)="selectCenter($event)">
+        <option *ngFor="let option of processingCenterNames" [value]="option.value"
+                [selected]="selectedProcessingCenter === option.value">{{ option.viewValue }}</option>
+    </select>
+    <select class="col-2" matNativeControl (change)="selectFormName($event)">
+        <option *ngFor="let option of formNames" [value]="option.value"
+                [selected]="selectedFormName === option.value">{{ option.viewValue }}</option>
+    </select>
+</div>
+<div class="row">
+    <div class="chart-wrapper">
+        <canvas baseChart
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"
+                [plugins]="lineChartPlugins">
+        </canvas>
+    </div>
+</div>
