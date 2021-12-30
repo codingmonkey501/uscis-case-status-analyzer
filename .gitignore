@@ -4,3 +4,4 @@ node_modules/**
 target/**
 log/**
 package-lock.json
+dist/**
